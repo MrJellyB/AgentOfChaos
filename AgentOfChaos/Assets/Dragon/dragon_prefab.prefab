@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8512005784334202583}
   - component: {fileID: 6149120783415929814}
   - component: {fileID: 8625294394895362311}
+  - component: {fileID: 7843511210291491452}
   - component: {fileID: 3613948268074470427}
   m_Layer: 0
   m_Name: Sphere
@@ -113,6 +114,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7843511210291491452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355803758700240126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0497dabd7cb094ab0dc8a87cfca415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  hit: 10
+  showBar: 1
+  HealthBar: {fileID: 8912076419231376243, guid: fa5e59caa78462c4d9c05b402b671c3d, type: 3}
 --- !u!136 &3613948268074470427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -172,5 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 8625294394895362311}
+  force: 0
+  frameUpdateInterval: 100
   path: []
   marker: {fileID: 2301584606865286329, guid: ae237a78b2ca62e43a77be0feafcb487, type: 3}
