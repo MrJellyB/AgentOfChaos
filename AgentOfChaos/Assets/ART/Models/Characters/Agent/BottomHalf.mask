@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BottomHalf
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Agent_Rig
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+    m_Weight: 0
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+    m_Weight: 1
+  - m_Path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+    m_Weight: 1
+  - m_Path: MDL_AgentChaos
+    m_Weight: 0

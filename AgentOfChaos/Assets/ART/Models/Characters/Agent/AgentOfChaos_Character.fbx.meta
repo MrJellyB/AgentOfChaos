@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: 1ed7eb4ed1c4a1743a2295b7b2b17e39
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: -3176884680461750752
+    second: Aim
+  - first:
+      74: -3704289112126983070
+    second: Shoot
+  - first:
+      74: 331576029851410420
+    second: CallTower
+  - first:
+      74: 5522812681064789136
+    second: Run
+  - first:
+      74: 4348485665485846014
+    second: Death
+  - first:
+      74: 4403496267504607729
+    second: Idle_Legs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_AgentOfChaos
+    second: {fileID: 2100000, guid: 54acfc22c4250254ca90d79fd94fca57, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 0
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 6e1bfb5fb964d1e4b907f145ceda7c50, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Aim
+      takeName: Aim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 0
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 6e1bfb5fb964d1e4b907f145ceda7c50, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Shoot
+      takeName: Shoot
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 0
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 6e1bfb5fb964d1e4b907f145ceda7c50, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CallTower
+      takeName: CallTower
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 0
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 6e1bfb5fb964d1e4b907f145ceda7c50, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 1
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 477749dec1a7d294ebb055549742793c, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Death
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_Legs
+      takeName: Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Agent_Rig
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.L/DEF-ELBOW.L/DEF-HAND.L/DEF-GUN
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-ARM.R/DEF-ELBOW.R/DEF-HAND.R/DEF-FINGER
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-CHEST/DEF-HEAD/DEF-GLASSES
+        weight: 0
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.L/DEF-SHIN.L/DEF-FOOT.L/DEF-TOES.L
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R
+        weight: 1
+      - path: Agent_Rig/DEF-ROOT/DEF-TORSO/DEF-THIGH.R/DEF-SHIN.R/DEF-FOOT.R/DEF-TOES.R
+        weight: 1
+      - path: MDL_AgentChaos
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 477749dec1a7d294ebb055549742793c, type: 2}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
