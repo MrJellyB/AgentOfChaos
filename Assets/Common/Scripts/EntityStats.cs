@@ -28,24 +28,27 @@ public class EntityStats : MonoBehaviour
     // TODO: change collsion to ballistic object class
     public void OnCollisionEnter(Collision collision)
     {
-        if (hp - hit < 0)
+        if (collision?.transform?.parent?.GetComponent<Projectile>() != null)
         {
-            EntityStats.EntityDeathEvent?.Invoke(this);
-            gameObject.SetActive(false);
-            ownHealthBar?.gameObject.SetActive(false);
-        } 
-        else
-        {
-            hp -= hit;
-
-            if (showBar)
+            if (hp - hit < 0)
             {
-                Transform healthPlane = ownHealthBar.Find("healthPlane");
-                healthPlane.localScale = new Vector3(
-                    healthPlane.localScale.x * (float)hp / (float)originalHp, 
-                    healthPlane.localScale.y,
-                    healthPlane.localScale.z
-                );
+                EntityStats.EntityDeathEvent?.Invoke(this);
+                gameObject.SetActive(false);
+                ownHealthBar?.gameObject.SetActive(false);
+            }
+            else
+            {
+                hp -= hit;
+
+                if (showBar)
+                {
+                    Transform healthPlane = ownHealthBar.Find("healthPlane");
+                    healthPlane.localScale = new Vector3(
+                        healthPlane.localScale.x * (float)hp / (float)originalHp,
+                        healthPlane.localScale.y,
+                        healthPlane.localScale.z
+                    );
+                }
             }
         }
     }
