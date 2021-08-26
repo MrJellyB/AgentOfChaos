@@ -24,6 +24,11 @@ public class ChickenInitiator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameEvents.StartBatchEvent += InsantiateEnemies;
+    }
+
+    private void InsantiateEnemies()
+    {
         if (mode == InitiateMode.Circle)
         {
             for (int i = 0; i < countToInitiate; i++)

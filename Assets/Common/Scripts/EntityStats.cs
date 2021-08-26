@@ -58,7 +58,10 @@ public class EntityStats : MonoBehaviour
         if (showBar)
         {
             Vector3 updatedPos = transform.position + (Vector3.up * 2);
-            ownHealthBar.transform.SetPositionAndRotation(updatedPos, Quaternion.identity);
+            if (Camera.current != null)
+            {
+                ownHealthBar.transform.SetPositionAndRotation(updatedPos, Quaternion.LookRotation(Vector3.up, Camera.current.transform.position));
+            }
         }
     }
 }

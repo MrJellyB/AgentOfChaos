@@ -506,6 +506,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8935985763363562595, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
+      propertyPath: restTimeSeconds
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8935985763363562595, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
+      propertyPath: waveTimeSeconds
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8935985763363562595, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
+      propertyPath: inBetweenBatchSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: mode
       value: 0
@@ -520,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: pointToInLine.x
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: pointToInLine.z
@@ -532,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 1804056640}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: pointToInitiateAround.x
-      value: -10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: pointToInitiateAround.z

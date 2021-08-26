@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7176925181515551770}
   - component: {fileID: 3015965584427981520}
+  - component: {fileID: -8935985763363562595}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -46,3 +47,18 @@ MonoBehaviour:
   pointToInitiateAround: {x: -5, y: 0, z: -5}
   radius: 5
   chickenToInitiate: {fileID: 0}
+  countToInitiate: 0
+  mode: 0
+  pointToInLine: {x: 0, y: 0, z: 0}
+--- !u!114 &-8935985763363562595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437819047168764535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8856e22c902ffcc4eb832fba3067cc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
