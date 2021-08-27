@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject towerPrefab;
     public float speed = 5;
+    private Animator anim;
 
     public float spread = 2.5f;
 
@@ -17,17 +18,29 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
+        anim.SetBool("isAiming", true);
         shotCooldown = 1 / shotsPerSecond;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         timeSinceShot += Time.deltaTime;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime;
         var y = Input.GetAxis("Vertical") * Time.deltaTime;
-        var offset = new Vector3(x, 0, y);
-        body.MovePosition(body.position + offset * speed);
+        if (x != 0 || y != 0)
+        {
+            var offset = new Vector3(x, 0, y) * speed;
+            anim.SetFloat("speed",speed);
+            body.MovePosition(body.position + offset );
+        }
+        else
+        {
+            anim.SetFloat("speed",0f);
+        }
+
         var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition,Camera.MonoOrStereoscopicEye.Mono);
         if (Physics.Raycast(mouseRay, out RaycastHit hitInfo, maxDistance: 200f))
         {
@@ -43,6 +56,7 @@ public class Movement : MonoBehaviour
         {
             timeSinceShot = 0;
             var eulerRotation = body.rotation.eulerAngles + Vector3.up * Random.Range(-spread, spread);
+            anim.SetTrigger("shoot");
             Instantiate(bulletPrefab, body.transform.position+body.transform.forward, Quaternion.Euler(eulerRotation));
         }
         if (Input.GetMouseButtonDown(1))
