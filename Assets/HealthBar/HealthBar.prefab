@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8912076419231376243}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1943281624427978917}
   - component: {fileID: 3114554306992415065}
   - component: {fileID: 6359926979141614465}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: healthPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 3829620076365705178}
   - component: {fileID: 8407814255585439737}
   - component: {fileID: 4631700659707423064}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: borderPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

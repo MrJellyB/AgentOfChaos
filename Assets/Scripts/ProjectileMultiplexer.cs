@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ProjectileMultiplexer : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public int multiplyAmount = 2;
     public float angle = 90f;
+    public float spread = 2.5f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,8 +32,8 @@ public class ProjectileMultiplexer : MonoBehaviour
         //spawn at angle intervals from the original direction to the left and right.
         for (int i = 0; i < spawnAmount; i+= 2)
         {
-            SpawnProjectile(originalY + angle * (i+1));
-            SpawnProjectile(originalY - angle * (i+1));
+            SpawnProjectile(originalY + angle * (i+1) + Random.Range(-spread,spread));
+            SpawnProjectile(originalY - angle * (i+1) + Random.Range(-spread,spread));
         }
         //if the amount to spawn is odd, there will be a middle bullet left that is going to the original direction
         if (isOdd)

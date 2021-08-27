@@ -1,3 +1,4 @@
+using System.Timers;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,16 +7,23 @@ public class Movement : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject towerPrefab;
     public float speed = 5;
-    
+
+    public float spread = 2.5f;
+
+    public float shotsPerSecond = 10f;
+
+    private float timeSinceShot = 0f;
+    private float shotCooldown = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        shotCooldown = 1 / shotsPerSecond;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timeSinceShot += Time.deltaTime;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime;
         var y = Input.GetAxis("Vertical") * Time.deltaTime;
         var offset = new Vector3(x, 0, y);
@@ -31,9 +39,11 @@ public class Movement : MonoBehaviour
             // this.transform.rotation = Quaternion.LookRotation(target, Vector3.up);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && timeSinceShot >= shotCooldown)
         {
-            Instantiate(bulletPrefab, body.transform.position+body.transform.forward, body.rotation);
+            timeSinceShot = 0;
+            var eulerRotation = body.rotation.eulerAngles + Vector3.up * Random.Range(-spread, spread);
+            Instantiate(bulletPrefab, body.transform.position+body.transform.forward, Quaternion.Euler(eulerRotation));
         }
         if (Input.GetMouseButtonDown(1))
         {
