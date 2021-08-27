@@ -30,7 +30,7 @@ public class EntityStats : MonoBehaviour
     {
         if (collision?.transform?.parent?.GetComponent<Projectile>() != null)
         {
-            if (hp - hit < 0)
+            if (hp - hit <= 0)
             {
                 EntityStats.EntityDeathEvent?.Invoke(this);
                 gameObject.SetActive(false);

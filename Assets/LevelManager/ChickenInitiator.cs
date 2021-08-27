@@ -11,20 +11,36 @@ public enum InitiateMode
 
 public class ChickenInitiator : MonoBehaviour
 {
-    public Vector3 pointToInitiateAround;
-    public float radius = 5;
+    public Transform edge;
     public GameObject chickenToInitiate;
     public int countToInitiate = 0;
     public InitiateMode mode = InitiateMode.Circle;
 
-    public Vector3 pointToInLine;
-
+    
+    private Vector3 pointToInitiateAround;
     private float minGapBetweenPoints = 3;
 
+    public float radius
+    {
+        get
+        {
+            return Vector3.Distance(transform.position, edge.position);
+        }
+    }
+
+    public Vector3 pointToInLine
+    {
+        get
+        {
+            return edge.position;
+        }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         GameEvents.StartBatchEvent += InsantiateEnemies;
+        pointToInitiateAround = transform.position;
     }
 
     private void InsantiateEnemies()
@@ -69,7 +85,7 @@ public class InitiatorEditor : Editor
 {
     public void Start()
     {
-
+        
     }
 
     public void OnSceneGUI()
@@ -79,11 +95,11 @@ public class InitiatorEditor : Editor
         Handles.color = color;
         if (t.mode == InitiateMode.Circle)
         {
-            Handles.DrawWireDisc(t.pointToInitiateAround, Vector3.up, t.radius);
+            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.radius);
         }
         else
         {
-            Handles.DrawLine(t.pointToInitiateAround, t.pointToInLine, 2);
+            Handles.DrawLine(t.transform.position, t.pointToInLine, 2);
         }
     }
 }
