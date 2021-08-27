@@ -804,7 +804,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 270
       mode: 3
       spread: 0
       speed:
@@ -976,7 +976,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 10
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 6670810204476739119}
   - component: {fileID: 9122460898553938222}
   m_Layer: 0
-  m_Name: "TowerSplit_S\u05D5\u05E0"
+  m_Name: TowerSplit_Sub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5666,7 +5666,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 270
       mode: 3
       spread: 0
       speed:
@@ -5838,7 +5838,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 10
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
