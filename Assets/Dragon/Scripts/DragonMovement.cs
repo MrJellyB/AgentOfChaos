@@ -8,18 +8,18 @@ public class DragonMovement : MonoBehaviour
     public Rigidbody m_rigidbody;
     public float force;
     public int frameUpdateInterval = 100;
-    Queue<Vector3> pathQueue;
-    public Vector3[] path;
+    Queue<Transform> pathQueue;
+    public Transform[] path;
     public Transform marker;
 
     // Start is called before the first frame update
     void Start()
     {
-        pathQueue = new Queue<Vector3>(path);
+        pathQueue = new Queue<Transform>(path);
 
         for (int i = 0; i < path.Length; i++)
         {
-            Vector3 vec = path[i];
+            Vector3 vec = path[i].position;
             Instantiate(marker, vec, Quaternion.identity);
         }
     }
@@ -30,13 +30,13 @@ public class DragonMovement : MonoBehaviour
         if (Time.frameCount % frameUpdateInterval == 0) {
             if (pathQueue.Count != 0)
             {
-                Vector3 gotoPoint = pathQueue.Peek();
-                Vector3 heading = gotoPoint - m_rigidbody.position;
+                Transform gotoPoint = pathQueue.Peek();
+                Vector3 heading = gotoPoint.position - m_rigidbody.position;
                 Vector3 forward = m_rigidbody.transform.TransformDirection(Vector3.forward);
 
                 if (Vector3.Dot(Vector3.one, heading) > 0f)
                 {
-                    m_rigidbody.transform.LookAt(gotoPoint);
+                    m_rigidbody.transform.LookAt(gotoPoint.position);
                     m_rigidbody.AddForce(heading.normalized * force, ForceMode.Acceleration);
                     //m_rigidbody.MovePosition(gotoPoint);
                 }
@@ -48,6 +48,16 @@ public class DragonMovement : MonoBehaviour
             {
                 m_rigidbody.Sleep();
             }
+        }
+    }
+
+
+    void OnDrawGizmos()
+    {
+        foreach (var item in path)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(item.position, 1);
         }
     }
 }
