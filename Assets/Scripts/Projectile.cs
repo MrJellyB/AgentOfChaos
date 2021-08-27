@@ -4,7 +4,7 @@ public class Projectile : MonoBehaviour
 {
     public float lifeTime = 10f;
     public float speed = 0.1f;
-
+    public int damage = 10;
     
     private float age = 0f;
     // Start is called before the first frame update

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void EntityDeathHandler(EntityStats stats);
 
 public class EntityStats : MonoBehaviour
 {
@@ -10,11 +9,8 @@ public class EntityStats : MonoBehaviour
     private Transform ownHealthBar;
 
     public int hp = 100;
-    public int hit = 10;
     public bool showBar = false;
     public Transform HealthBar;
-
-    public static event EntityDeathHandler EntityDeathEvent;
 
     private void Start()
     {
@@ -28,11 +24,15 @@ public class EntityStats : MonoBehaviour
     // TODO: change collsion to ballistic object class
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision?.transform?.parent?.GetComponent<Projectile>() != null)
+        Projectile bullet = collision.gameObject.GetComponentInParent<Projectile>();
+
+        if (bullet != null)
         {
+            int hit = bullet.damage;
+
             if (hp - hit <= 0)
             {
-                EntityStats.EntityDeathEvent?.Invoke(this);
+                GameEvents.InvokeEntityDeathEvent(this);
                 gameObject.SetActive(false);
                 ownHealthBar?.gameObject.SetActive(false);
             }
