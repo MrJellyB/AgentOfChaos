@@ -77,20 +77,20 @@ public class WavesManager : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(WavesManager))]
-public class WavesManagerEditor : Editor
-{
-    public void Start()
-    {
+//[CustomEditor(typeof(WavesManager))]
+//public class WavesManagerEditor : Editor
+//{
+//    public void Start()
+//    {
 
-    }
+//    }
 
-    public void OnSceneGUI()
-    {
-        var t = target as WavesManager;
+//    public void OnSceneGUI()
+//    {
+//        var t = target as WavesManager;
 
-        Handles.Label(
-            Camera.current.transform.position - Vector3.one, 
-            "Rest Timer: " + (int)t.restTimeLeftSeconds + " Wave Timer: " + (int)t.waveTimeLeftSeconds);
-    }
-}
+//        Handles.Label(
+//            Camera.current.transform.position - Vector3.one, 
+//            "Rest Timer: " + (int)t.restTimeLeftSeconds + " Wave Timer: " + (int)t.waveTimeLeftSeconds);
+//    }
+//}

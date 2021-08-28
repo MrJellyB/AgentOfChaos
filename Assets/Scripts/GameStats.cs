@@ -20,6 +20,7 @@ public class GameStats : MonoBehaviour
     private void GameEventsOnCrossedEnemyEvent()
     {
         enemiesCrossed += 1;
+        GameEvents.InvokeGameOverEvent();
     }
 
     private void GameEventsOnEntityDeathEvent(EntityStats stats)
