@@ -16,8 +16,9 @@ public class ChickenInitiator : MonoBehaviour
     public GameObject chickenToInitiate;
     public int countToInitiate = 0;
     public InitiateMode mode = InitiateMode.Circle;
+    public Transform[] path;
 
-    
+
     private Vector3 pointToInitiateAround;
     private float minGapBetweenPoints = 3;
 
@@ -61,7 +62,9 @@ public class ChickenInitiator : MonoBehaviour
                 Vector3 randomCircle = Random.insideUnitCircle.normalized * Random.Range(innerRadius, radius);
                 randomCircle.Set(randomCircle.x, 0f, randomCircle.y);
                 //randomCircle.z = 0.5f;
-                Instantiate(chickenToInitiate, pointToInitiateAround + randomCircle, Quaternion.identity);
+                GameObject obj = Instantiate(chickenToInitiate, pointToInitiateAround + randomCircle, Quaternion.identity);
+                DragonMovement movement = obj.GetComponentInChildren<DragonMovement>();
+                movement.path = path;
             }
         }
         else

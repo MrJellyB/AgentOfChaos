@@ -33,9 +33,11 @@ GameObject:
   - component: {fileID: 2084341701}
   - component: {fileID: 2084341703}
   - component: {fileID: 2084341700}
+  - component: {fileID: 651229486}
+  - component: {fileID: 2603853825202120776}
   m_Layer: 0
   m_Name: Chicken
-  m_TagString: Untagged
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +50,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6462646367485822238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8567759, y: -2.8583717, z: 6.328272}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1488932562350841712}
@@ -69,11 +71,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 2084341702}
   force: 20
-  frameUpdateInterval: 10
+  frameUpdateInterval: 1
   path:
   - {fileID: 0}
   - {fileID: 0}
-  marker: {fileID: 2301584606865286329, guid: 10bb995d0d31b2d4bbe45575b8cdb4f0, type: 3}
+  movementMode: 1
+  speed: 5
+  targetAreaRadius: 2
+  drawGizmos: 0
 --- !u!54 &2084341702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,6 +138,37 @@ MonoBehaviour:
   showBar: 0
   HealthBar: {fileID: 8912076419231376243, guid: fa5e59caa78462c4d9c05b402b671c3d, type: 3}
   onDeathEffect: {fileID: 1185104921261685477, guid: 245a3f0e17b88c94db1428422fd5e3ec, type: 3}
+--- !u!114 &651229486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462646367485822238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4532960cc518b774390b716cbe1e9748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeshRenderer: {fileID: 4019047750541271275}
+  PossibleMeshes:
+  - {fileID: -5278297810371330342, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
+  - {fileID: -7647792853198578855, guid: 820f08f85c6b01f4689d58d9ed721f0d, type: 3}
+--- !u!114 &2603853825202120776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462646367485822238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4145d3a85934a40924bca3b39caa02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  egg: {fileID: 5846644691360908348, guid: a37144d9d1681b44ca3207a227b02072, type: 3}
+  eggChance: 25
+  eggForce: 600
 --- !u!1001 &1379079208031123611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -188,6 +224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AgentOfChaos_Hen_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
 --- !u!1 &2297417358259471818 stripped
@@ -198,5 +238,10 @@ GameObject:
 --- !u!4 &1488932562350841712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
+  m_PrefabInstance: {fileID: 1379079208031123611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4019047750541271275 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6564559849134614416, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
   m_PrefabInstance: {fileID: 1379079208031123611}
   m_PrefabAsset: {fileID: 0}
