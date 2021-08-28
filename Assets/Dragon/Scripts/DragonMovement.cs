@@ -27,7 +27,7 @@ public class DragonMovement : MonoBehaviour
             {
                 Transform gotoPoint = pathQueue.Peek();
                 Vector3 heading = gotoPoint.position - m_rigidbody.position;
-                Vector3 forward = m_rigidbody.transform.TransformDirection(Vector3.forward);
+                heading.y = 0;
 
                 if (Vector3.Dot(Vector3.one, heading) > 0f)
                 {

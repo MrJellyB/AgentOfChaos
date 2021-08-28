@@ -58,7 +58,7 @@ public class ChickenInitiator : MonoBehaviour
         {
             for (int i = 0; i < countToInitiate; i++)
             {
-                Vector3 randomCircle = (Vector3)Random.insideUnitCircle * (innerRadius + radius);
+                Vector3 randomCircle = Random.insideUnitCircle.normalized * Random.Range(innerRadius, radius);
                 randomCircle.Set(randomCircle.x, 0f, randomCircle.y);
                 //randomCircle.z = 0.5f;
                 Instantiate(chickenToInitiate, pointToInitiateAround + randomCircle, Quaternion.identity);
