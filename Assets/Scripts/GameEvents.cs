@@ -6,6 +6,8 @@ public delegate void StartBatchHandler();
 public delegate void CrossedEnemyHandler();
 public delegate void DiedEnemyHandler();
 public delegate void EntityDeathHandler(EntityStats stats);
+public delegate void PlayerHpChangedHandler(float percentLeft);
+
 
 public class GameEvents
 {
@@ -14,6 +16,7 @@ public class GameEvents
     public static event DiedEnemyHandler DiedEnemyEvent;
     public static event EntityDeathHandler EntityDeathEvent;
 
+    public static event PlayerHpChangedHandler PlayerHpChangedEvent;
     public static void InvokeStartBatchEvent()
     {
         StartBatchEvent?.Invoke();
@@ -32,5 +35,10 @@ public class GameEvents
     public static void InvokeEntityDeathEvent(EntityStats stats)
     {
         EntityDeathEvent?.Invoke(stats);
+    }
+
+    public static void InvokePlayerHpChangedEvent(float hpPercent)
+    {
+        PlayerHpChangedEvent?.Invoke(hpPercent);
     }
 }

@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0497dabd7cb094ab0dc8a87cfca415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 10
   hp: 6
   showBar: 0
   HealthBar: {fileID: 8912076419231376243, guid: fa5e59caa78462c4d9c05b402b671c3d, type: 3}
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 4019047750541271275}
+  chickenAnimator: {fileID: 1220209149255121499}
   PossibleMeshes:
   - {fileID: -5278297810371330342, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
   - {fileID: -7647792853198578855, guid: 820f08f85c6b01f4689d58d9ed721f0d, type: 3}

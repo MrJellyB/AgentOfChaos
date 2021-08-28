@@ -6,20 +6,11 @@ public class Projectile : MonoBehaviour
     public int damage = 10;
 
     public int hops = 5;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
     {
         var dt = Time.deltaTime;
         this.transform.Translate(this.transform.forward * speed * dt, Space.World);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("bullet hit");
     }
 }

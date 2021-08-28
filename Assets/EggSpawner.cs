@@ -15,9 +15,9 @@ public class EggSpawner : MonoBehaviour
         if (eggChance >= Random.Range(1, 101))
         {
             Vector3 rotation = Random.onUnitSphere;
-            var eggObj = Instantiate(egg, transform.position, Quaternion.Euler(rotation));
-            var eggRb = eggObj.GetComponent<Rigidbody>();
-            eggRb.AddForce(Random.onUnitSphere * eggForce);
+            // var eggObj = Instantiate(egg, transform.position, Quaternion.Euler(rotation));
+            // var eggRb = eggObj.GetComponent<Rigidbody>();
+            // eggRb.AddForce(Random.onUnitSphere * eggForce);
         }
     }
 }

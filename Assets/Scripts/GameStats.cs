@@ -5,43 +5,29 @@ using UnityEngine;
 
 public class GameStats : MonoBehaviour
 {
-    public int winningWavesCount = 5;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI enemyText;
-    public string chickensLeftTitle = "Chickens Left: {0}";
-
-    private int score = 0;
-    private int leftEnemies = 100;
+    public int allowedEnemyCrossings = 10; 
+    public int score = 0;
+    public int enemiesCrossed = 0;
+    public GameUIManager uiManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameEvents.EntityDeathEvent += GameEvents_EntityDeathEvent;
-        GameEvents.CrossedEnemyEvent += GameEvents_CrossedEnemyEvent;
-
-        scoreText.text += " " + score;
+        GameEvents.EntityDeathEvent += GameEventsOnEntityDeathEvent;
+        GameEvents.CrossedEnemyEvent += GameEventsOnCrossedEnemyEvent;
     }
 
-    private void GameEvents_CrossedEnemyEvent()
+    private void GameEventsOnCrossedEnemyEvent()
     {
-        leftEnemies--;
-        enemyText.text = string.Format(chickensLeftTitle, leftEnemies);
+        enemiesCrossed += 1;
+    }
 
-        if (leftEnemies == 0)
+    private void GameEventsOnEntityDeathEvent(EntityStats stats)
+    {
+        if (stats.CompareTag("Chicken"))
         {
-            // Game over
+            score += stats.score;
+            uiManager.UpdateScore(score);
         }
-    }
-
-    private void GameEvents_EntityDeathEvent(EntityStats stats)
-    {
-        score += 10;
-
-        scoreText.text =  "Score: " + score;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

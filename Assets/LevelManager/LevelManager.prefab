@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316673110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35, y: 0, z: -4.1}
+  m_LocalPosition: {x: -35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7176925181515551770}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5944253511006766269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.7, y: 0, z: 38.8}
+  m_LocalPosition: {x: -45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7176925181515551770}
@@ -112,6 +112,8 @@ MonoBehaviour:
   chickenToInitiate: {fileID: 6462646367485822238, guid: 07c0e773c6653d34a90090e9a5f9126a, type: 3}
   countToInitiate: 50
   mode: 0
+  path:
+  - {fileID: 0}
 --- !u!114 &-8935985763363562595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f61acc6217a42846af434170939f1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningWavesCount: 5
-  desiredCrossedEnemies: 100
-  scoreCanvas: {fileID: 0}
-  enemyCountCanvas: {fileID: 0}
+  allowedEnemyCrossings: 10
+  score: 0
+  enemiesCrossed: 0
+  uiManager: {fileID: 0}
