@@ -8,11 +8,12 @@ public class EntityStats : MonoBehaviour
     private int originalHp;
     private Transform ownHealthBar;
 
+    public int score = 10;
     public int hp = 100;
     public bool showBar = false;
     public Transform HealthBar;
     public GameObject onDeathEffect;
-
+    
     public void AddHP(int bonusHp)
     {
         hp = Mathf.Max(hp + bonusHp, originalHp);
@@ -39,6 +40,11 @@ public class EntityStats : MonoBehaviour
             if (hp - hit <= 0)
             {
                 GameEvents.InvokeEntityDeathEvent(this);
+                if (CompareTag("Player"))
+                {
+                    GameEvents.InvokePlayerHpChangedEvent(0);
+                }
+
                 gameObject.SetActive(false);
                 Destroy(gameObject);
                 ownHealthBar?.gameObject.SetActive(false);
@@ -50,6 +56,10 @@ public class EntityStats : MonoBehaviour
             else
             {
                 hp -= hit;
+                if (CompareTag("Player"))
+                {
+                    GameEvents.InvokePlayerHpChangedEvent(hp*1f / originalHp);
+                }
 
                 if (showBar)
                 {
