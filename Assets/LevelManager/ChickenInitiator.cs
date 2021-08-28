@@ -12,6 +12,7 @@ public enum InitiateMode
 public class ChickenInitiator : MonoBehaviour
 {
     public Transform edge;
+    public Transform innerEdge;
     public GameObject chickenToInitiate;
     public int countToInitiate = 0;
     public InitiateMode mode = InitiateMode.Circle;
@@ -25,6 +26,14 @@ public class ChickenInitiator : MonoBehaviour
         get
         {
             return Vector3.Distance(transform.position, edge.position);
+        }
+    }
+
+    public float innerRadius
+    {
+        get
+        {
+            return Vector3.Distance(transform.position, innerEdge.position);
         }
     }
 
@@ -49,8 +58,9 @@ public class ChickenInitiator : MonoBehaviour
         {
             for (int i = 0; i < countToInitiate; i++)
             {
-                Vector3 randomCircle = (Vector3)Random.insideUnitCircle * radius;
-                randomCircle.Set(randomCircle.x, 2, randomCircle.y);
+                Vector3 randomCircle = (Vector3)Random.insideUnitCircle * (innerRadius + radius);
+                randomCircle.Set(randomCircle.x, 0f, randomCircle.y);
+                //randomCircle.z = 0.5f;
                 Instantiate(chickenToInitiate, pointToInitiateAround + randomCircle, Quaternion.identity);
             }
         }
@@ -83,11 +93,6 @@ public class ChickenInitiator : MonoBehaviour
 [CustomEditor(typeof(ChickenInitiator))]
 public class InitiatorEditor : Editor
 {
-    public void Start()
-    {
-        
-    }
-
     public void OnSceneGUI()
     {
         var t = target as ChickenInitiator;

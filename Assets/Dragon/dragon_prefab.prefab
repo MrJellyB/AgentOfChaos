@@ -160,7 +160,7 @@ MonoBehaviour:
   force: 0
   frameUpdateInterval: 100
   path: []
-  marker: {fileID: 2301584606865286329, guid: 10bb995d0d31b2d4bbe45575b8cdb4f0, type: 3}
+  drawGizmos: 0
 --- !u!1001 &1379079208031123611
 PrefabInstance:
   m_ObjectHideFlags: 0

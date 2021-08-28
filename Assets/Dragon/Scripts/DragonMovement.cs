@@ -10,18 +10,13 @@ public class DragonMovement : MonoBehaviour
     public int frameUpdateInterval = 100;
     Queue<Transform> pathQueue;
     public Transform[] path;
-    public Transform marker;
+
+    public bool drawGizmos = false;
 
     // Start is called before the first frame update
     void Start()
     {
         pathQueue = new Queue<Transform>(path);
-
-        for (int i = 0; i < path.Length; i++)
-        {
-            Vector3 vec = path[i].position;
-            Instantiate(marker, vec, Quaternion.identity);
-        }
     }
 
     // Update is called once per frame
@@ -54,10 +49,13 @@ public class DragonMovement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        foreach (var item in path)
+        if (drawGizmos)
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawSphere(item.position, 1);
+            foreach (var item in path)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawSphere(item.position, 0.1f);
+            }
         }
     }
 }
