@@ -13,6 +13,11 @@ public class EntityStats : MonoBehaviour
     public Transform HealthBar;
     public GameObject onDeathEffect;
 
+    public void AddHP(int bonusHp)
+    {
+        hp = Mathf.Max(hp + bonusHp, originalHp);
+    }
+    
     private void Start()
     {
         originalHp = hp;
