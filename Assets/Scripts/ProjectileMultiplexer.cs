@@ -14,14 +14,14 @@ public class ProjectileMultiplexer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var originalProj = other.gameObject.GetComponentInParent<Projectile>();
-        if (originalProj != null)
+        if (originalProj != null && originalProj.hops > 0)
         {
-            SpawnProjectiles(other.transform.rotation.eulerAngles.y);
+            SpawnProjectiles(other.transform.rotation.eulerAngles.y, originalProj.hops - 1);
             GameObject.Destroy(other.gameObject);
         }
     }
 
-    private void SpawnProjectiles(float originalY)
+    private void SpawnProjectiles(float originalY, int hops)
     {
         var spawnAmount = multiplyAmount;
         var isOdd = multiplyAmount % 2 != 0;
@@ -32,19 +32,21 @@ public class ProjectileMultiplexer : MonoBehaviour
         //spawn at angle intervals from the original direction to the left and right.
         for (int i = 0; i < spawnAmount; i+= 2)
         {
-            SpawnProjectile(originalY + angle * (i+1) + Random.Range(-spread,spread));
-            SpawnProjectile(originalY - angle * (i+1) + Random.Range(-spread,spread));
+            SpawnProjectile(originalY + angle * (i+1) + Random.Range(-spread,spread), hops);
+            SpawnProjectile(originalY - angle * (i+1) + Random.Range(-spread,spread), hops);
         }
         //if the amount to spawn is odd, there will be a middle bullet left that is going to the original direction
         if (isOdd)
         {
-            SpawnProjectile(originalY);
+            SpawnProjectile(originalY, hops);
         }
     }
 
-    private void SpawnProjectile(float y)
+    private void SpawnProjectile(float y, int hops)
     {
         var g = Instantiate(projectilePrefab, this.transform.position, Quaternion.Euler(0, y, 0));
+        var proj = g.GetComponent<Projectile>();
+        proj.hops = hops;
         g.transform.Translate(g.transform.forward, Space.World);
     }
 }
