@@ -29,8 +29,8 @@ public class DragonMovement : MonoBehaviour
     {
         pathQueue = new Queue<Transform>(path);
         instantiationPoint = transform.position;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(instantiationPoint, path[0].position);
+        // Gizmos.color = Color.yellow;
+        // Gizmos.DrawLine(instantiationPoint, path[0].position);
     }
 
     // Update is called once per frame

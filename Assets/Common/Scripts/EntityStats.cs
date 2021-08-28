@@ -13,7 +13,7 @@ public class EntityStats : MonoBehaviour
     public bool showBar = false;
     public Transform HealthBar;
     public GameObject onDeathEffect;
-    
+    public ClipPlayer onDeathClip;
     public void AddHP(int bonusHp)
     {
         hp = Mathf.Max(hp + bonusHp, originalHp);
@@ -51,6 +51,11 @@ public class EntityStats : MonoBehaviour
                 if (onDeathEffect != null)
                 {
                     Instantiate(onDeathEffect, transform.position, Quaternion.identity);
+                }
+
+                if (onDeathClip != null)
+                {
+                    onDeathClip.Play();
                 }
             }
             else

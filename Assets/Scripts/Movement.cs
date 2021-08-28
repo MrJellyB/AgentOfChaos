@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject towerPrefab;
     public Image towerTimerUI;
+    public ClipPlayer shotSounds;
     public float speed = 5;
     private Animator anim;
 
@@ -68,6 +69,7 @@ public class Movement : MonoBehaviour
             var eulerRotation = body.rotation.eulerAngles + Vector3.up * Random.Range(-spread, spread);
             anim.SetTrigger("shoot");
             Instantiate(bulletPrefab, body.transform.position+body.transform.forward, Quaternion.Euler(eulerRotation));
+            shotSounds.Play();
         }
         if (Input.GetMouseButtonDown(1) && timeSinceTower >= towerCooldown)
         {
