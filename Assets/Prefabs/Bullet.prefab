@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5014418320230698872}
-  - component: {fileID: 5116628736383422067}
+  - component: {fileID: 6424847415007918524}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_Father: {fileID: 6722962782666093005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &5116628736383422067
-CapsuleCollider:
+--- !u!65 &6424847415007918524
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41,10 +41,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.9
-  m_Height: 9.76
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 3.31, y: 4.25, z: 10}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &6722962782666093000
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,11 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9cd1fa9da3c6744ba5ba0ace696638d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9cd1fa9da3c6744ba5ba0ace696638d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9cd1fa9da3c6744ba5ba0ace696638d, type: 3}
       propertyPath: m_LocalScale.z
