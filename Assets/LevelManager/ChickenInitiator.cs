@@ -101,6 +101,7 @@ public class InitiatorEditor : Editor
         if (t.mode == InitiateMode.Circle)
         {
             Handles.DrawWireDisc(t.transform.position, Vector3.up, t.radius);
+            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.innerRadius);
         }
         else
         {
