@@ -68,12 +68,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 2084341702}
-  force: 20
-  frameUpdateInterval: 10
+  force: 1
+  frameUpdateInterval: 1
   path:
   - {fileID: 0}
   - {fileID: 0}
-  marker: {fileID: 2301584606865286329, guid: 10bb995d0d31b2d4bbe45575b8cdb4f0, type: 3}
+  movementMode: 1
+  speed: 10
+  drawGizmos: 1
 --- !u!54 &2084341702
 Rigidbody:
   m_ObjectHideFlags: 0
