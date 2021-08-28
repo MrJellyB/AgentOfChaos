@@ -76,7 +76,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   movementMode: 1
-  speed: 0.5
+  speed: 0.4
   targetAreaRadius: 0.5
   drawGizmos: 0
 --- !u!54 &2084341702
