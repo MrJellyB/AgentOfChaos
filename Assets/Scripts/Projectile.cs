@@ -6,10 +6,6 @@ public class Projectile : MonoBehaviour
     public int damage = 10;
 
     public int hops = 5;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
