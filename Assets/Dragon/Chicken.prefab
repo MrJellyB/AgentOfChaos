@@ -35,7 +35,6 @@ GameObject:
   - component: {fileID: 2084341700}
   - component: {fileID: 651229486}
   - component: {fileID: 2603853825202120776}
-  - component: {fileID: 1007515087813582436}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -72,10 +71,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 2084341702}
   force: 20
-  frameUpdateInterval: 10
+  frameUpdateInterval: 1
   path:
   - {fileID: 0}
   - {fileID: 0}
+  movementMode: 1
+  speed: 5
+  targetAreaRadius: 2
   drawGizmos: 0
 --- !u!54 &2084341702
 Rigidbody:
@@ -167,19 +169,6 @@ MonoBehaviour:
   egg: {fileID: 5846644691360908348, guid: a37144d9d1681b44ca3207a227b02072, type: 3}
   eggChance: 25
   eggForce: 600
---- !u!114 &1007515087813582436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6462646367485822238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67273c34c664065468952447dadca7a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 5
 --- !u!1001 &1379079208031123611
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,12 +6,12 @@ using UnityEngine;
 public class GameStats : MonoBehaviour
 {
     public int winningWavesCount = 5;
-    public int desiredCrossedEnemies = 100;
-    public Canvas scoreCanvas;
-    public Canvas enemyCountCanvas;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI enemyText;
+    public string chickensLeftTitle = "Chickens Left: {0}";
 
     private int score = 0;
-    private int crossedEnemies = 0;
+    private int leftEnemies = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -19,22 +19,24 @@ public class GameStats : MonoBehaviour
         GameEvents.EntityDeathEvent += GameEvents_EntityDeathEvent;
         GameEvents.CrossedEnemyEvent += GameEvents_CrossedEnemyEvent;
 
-        TextMeshProUGUI scoreText = scoreCanvas.GetComponentInChildren<TextMeshProUGUI>();
         scoreText.text += " " + score;
     }
 
     private void GameEvents_CrossedEnemyEvent()
     {
-        crossedEnemies++;
-        TextMeshProUGUI enemyText = enemyCountCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        enemyText.text = string.Format("Enemy crossed: {0}/{1}", crossedEnemies, desiredCrossedEnemies);
+        leftEnemies--;
+        enemyText.text = string.Format(chickensLeftTitle, leftEnemies);
+
+        if (leftEnemies == 0)
+        {
+            // Game over
+        }
     }
 
     private void GameEvents_EntityDeathEvent(EntityStats stats)
     {
         score += 10;
 
-        TextMeshProUGUI scoreText = scoreCanvas.GetComponentInChildren<TextMeshProUGUI>();
         scoreText.text =  "Score: " + score;
     }
 

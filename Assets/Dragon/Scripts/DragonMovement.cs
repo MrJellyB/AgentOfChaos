@@ -18,6 +18,7 @@ public class DragonMovement : MonoBehaviour
     public Transform[] path;
     public MovementMode movementMode = MovementMode.ByForce;
     public int speed = 5;
+    public float targetAreaRadius = 2f;
 
     public bool drawGizmos = false;
 
@@ -38,7 +39,7 @@ public class DragonMovement : MonoBehaviour
                 heading.y = 0;
                 Vector3 normalizedHeading = heading.normalized;
 
-                if (Vector3.Dot(Vector3.one, heading) > 0f)
+                if (Mathf.Abs(Vector3.Dot(Vector3.one, heading)) > targetAreaRadius)
                 {
                     m_rigidbody.transform.LookAt(gotoPoint.position);
 
@@ -74,7 +75,8 @@ public class DragonMovement : MonoBehaviour
                 }
             } else
             {
-                m_rigidbody.Sleep();
+                GameEvents.InvokeCrossedEnemyEvent();
+                Destroy(m_rigidbody.gameObject);
             }
         }
     }
