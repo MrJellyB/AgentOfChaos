@@ -33,6 +33,7 @@ GameObject:
   - component: {fileID: 2084341701}
   - component: {fileID: 2084341703}
   - component: {fileID: 2084341700}
+  - component: {fileID: 651229486}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6462646367485822238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8567759, y: -2.8583717, z: 6.328272}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1488932562350841712}
@@ -68,14 +69,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 2084341702}
-  force: 1
-  frameUpdateInterval: 1
+  force: 20
+  frameUpdateInterval: 10
   path:
   - {fileID: 0}
   - {fileID: 0}
-  movementMode: 1
-  speed: 10
-  drawGizmos: 1
+  drawGizmos: 0
 --- !u!54 &2084341702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,6 +134,22 @@ MonoBehaviour:
   showBar: 0
   HealthBar: {fileID: 8912076419231376243, guid: fa5e59caa78462c4d9c05b402b671c3d, type: 3}
   onDeathEffect: {fileID: 1185104921261685477, guid: 245a3f0e17b88c94db1428422fd5e3ec, type: 3}
+--- !u!114 &651229486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462646367485822238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4532960cc518b774390b716cbe1e9748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeshRenderer: {fileID: 4019047750541271275}
+  PossibleMeshes:
+  - {fileID: -5278297810371330342, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
+  - {fileID: -7647792853198578855, guid: 820f08f85c6b01f4689d58d9ed721f0d, type: 3}
 --- !u!1001 &1379079208031123611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,5 +215,10 @@ GameObject:
 --- !u!4 &1488932562350841712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
+  m_PrefabInstance: {fileID: 1379079208031123611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4019047750541271275 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6564559849134614416, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
   m_PrefabInstance: {fileID: 1379079208031123611}
   m_PrefabAsset: {fileID: 0}
