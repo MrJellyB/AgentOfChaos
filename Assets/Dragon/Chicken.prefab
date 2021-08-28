@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 4019047750541271275}
+  chickenAnimator: {fileID: 1220209149255121499}
   PossibleMeshes:
   - {fileID: -5278297810371330342, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
   - {fileID: -7647792853198578855, guid: 820f08f85c6b01f4689d58d9ed721f0d, type: 3}

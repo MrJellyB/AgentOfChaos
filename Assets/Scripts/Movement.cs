@@ -1,5 +1,7 @@
+using System;
 using System.Timers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Movement : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class Movement : MonoBehaviour
     public float spread = 2.5f;
 
     public float shotsPerSecond = 10f;
-
+    
     private float timeSinceShot = 0f;
     private float shotCooldown = 0f;
     // Start is called before the first frame update
@@ -33,7 +35,8 @@ public class Movement : MonoBehaviour
         {
             var offset = new Vector3(x, 0, y) * speed;
             anim.SetFloat("speed",speed);
-            body.MovePosition(body.position + offset );
+            var newPosition = body.position + offset;
+            body.MovePosition(newPosition);
         }
         else
         {
