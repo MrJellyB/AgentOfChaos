@@ -8,6 +8,7 @@ public delegate void DiedEnemyHandler();
 public delegate void EntityDeathHandler(EntityStats stats);
 public delegate void PlayerHpChangedHandler(float percentLeft);
 
+
 public class GameEvents
 {
     public static event StartBatchHandler StartBatchEvent;
