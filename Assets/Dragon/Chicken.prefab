@@ -34,6 +34,8 @@ GameObject:
   - component: {fileID: 2084341703}
   - component: {fileID: 2084341700}
   - component: {fileID: 651229486}
+  - component: {fileID: 2603853825202120776}
+  - component: {fileID: 1007515087813582436}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -150,6 +152,34 @@ MonoBehaviour:
   PossibleMeshes:
   - {fileID: -5278297810371330342, guid: 48680ed9921bc51469dfec002bd37ba2, type: 3}
   - {fileID: -7647792853198578855, guid: 820f08f85c6b01f4689d58d9ed721f0d, type: 3}
+--- !u!114 &2603853825202120776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462646367485822238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4145d3a85934a40924bca3b39caa02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  egg: {fileID: 5846644691360908348, guid: a37144d9d1681b44ca3207a227b02072, type: 3}
+  eggChance: 25
+  eggForce: 600
+--- !u!114 &1007515087813582436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462646367485822238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67273c34c664065468952447dadca7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5
 --- !u!1001 &1379079208031123611
 PrefabInstance:
   m_ObjectHideFlags: 0
