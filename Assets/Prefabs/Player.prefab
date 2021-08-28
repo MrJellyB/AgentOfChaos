@@ -104,7 +104,8 @@ MonoBehaviour:
   hp: 100
   showBar: 0
   HealthBar: {fileID: 8912076419231376243, guid: fa5e59caa78462c4d9c05b402b671c3d, type: 3}
-  onDeathEffect: {fileID: 0}
+  onDeathEffect: {fileID: 507068788401123296, guid: 89dce9ade7b3b4d44813a3f5714b3622, type: 3}
+  onDeathClip: {fileID: 0}
 --- !u!82 &1257215373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -220,6 +221,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5dd61adfa84d4a84ab6b6cb00a6d6067, type: 3}
   source: {fileID: 1257215373}
   volume: 0.05
+  playOnAwake: 0
 --- !u!1001 &1401032848
 PrefabInstance:
   m_ObjectHideFlags: 0
