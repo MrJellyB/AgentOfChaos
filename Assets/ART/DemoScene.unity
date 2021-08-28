@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: countToInitiate
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3015965584427981520, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: path.Array.size
@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176925181515551770, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7176925181515551770, guid: 6c81218a8d29bf2488da8cb5778c147a, type: 3}
       propertyPath: m_LocalPosition.z

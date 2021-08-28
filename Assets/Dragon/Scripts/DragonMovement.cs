@@ -17,15 +17,20 @@ public class DragonMovement : MonoBehaviour
     Queue<Transform> pathQueue;
     public Transform[] path;
     public MovementMode movementMode = MovementMode.ByForce;
-    public int speed = 5;
+    public float speed = 5f;
     public float targetAreaRadius = 2f;
 
     public bool drawGizmos = false;
+
+    private Vector3 instantiationPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         pathQueue = new Queue<Transform>(path);
+        instantiationPoint = transform.position;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(instantiationPoint, path[0].position);
     }
 
     // Update is called once per frame
@@ -35,11 +40,12 @@ public class DragonMovement : MonoBehaviour
             if (pathQueue.Count != 0)
             {
                 Transform gotoPoint = pathQueue.Peek();
-                Vector3 heading = gotoPoint.position - m_rigidbody.position;
-                heading.y = 0;
-                Vector3 normalizedHeading = heading.normalized;
+                Vector3 route = gotoPoint.position - instantiationPoint; 
+                Vector3 distance = gotoPoint.position - m_rigidbody.position;
+                distance.y = 0;
+                Vector3 normalizedDistance = distance.normalized;
 
-                if (Mathf.Abs(Vector3.Dot(Vector3.one, heading)) > targetAreaRadius)
+                if (Mathf.Abs(Vector3.Dot(Vector3.one, distance)) > targetAreaRadius)
                 {
                     m_rigidbody.transform.LookAt(gotoPoint.position);
 
@@ -48,14 +54,15 @@ public class DragonMovement : MonoBehaviour
                     {
                         case MovementMode.ByForce:
                             {
-                                m_rigidbody.AddForce(normalizedHeading * force, ForceMode.Acceleration);
+                                m_rigidbody.AddForce(normalizedDistance * force, ForceMode.Acceleration);
                                 break;
                             }
                         case MovementMode.ByTranslte:
                             {
-                                var x = normalizedHeading.x * Time.deltaTime;
-                                var y = normalizedHeading.z * Time.deltaTime;
-                                var offset = new Vector3(x, 0, y) * (float)speed;
+                                var x = route.x * Time.deltaTime;
+                                var y = route.z * Time.deltaTime;
+                                Debug.Log(string.Format("x: {0} y: {0}", x, y));
+                                var offset = new Vector3(x * (float)speed, 0, y * (float)speed);
                                 m_rigidbody.MovePosition(m_rigidbody.transform.position + offset);
 
                                 break;
@@ -65,7 +72,7 @@ public class DragonMovement : MonoBehaviour
                     }
                     if (movementMode == MovementMode.ByForce)
                     {
-                        m_rigidbody.AddForce(heading.normalized * force, ForceMode.Acceleration);
+                        m_rigidbody.AddForce(distance.normalized * force, ForceMode.Acceleration);
                     }
                         //m_rigidbody.MovePosition(gotoPoint);
                 }

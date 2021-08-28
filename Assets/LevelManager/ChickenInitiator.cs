@@ -93,22 +93,22 @@ public class ChickenInitiator : MonoBehaviour
 }
 
 
-[CustomEditor(typeof(ChickenInitiator))]
-public class InitiatorEditor : Editor
-{
-    public void OnSceneGUI()
-    {
-        var t = target as ChickenInitiator;
-        var color = new Color(1, 0.8f, 0.4f, 1);
-        Handles.color = color;
-        if (t.mode == InitiateMode.Circle)
-        {
-            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.radius);
-            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.innerRadius);
-        }
-        else
-        {
-            Handles.DrawLine(t.transform.position, t.pointToInLine, 2);
-        }
-    }
-}
+//[CustomEditor(typeof(ChickenInitiator))]
+//public class InitiatorEditor : Editor
+//{
+//    public void OnSceneGUI()
+//    {
+//        var t = target as ChickenInitiator;
+//        var color = new Color(1, 0.8f, 0.4f, 1);
+//        Handles.color = color;
+//        if (t.mode == InitiateMode.Circle)
+//        {
+//            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.radius);
+//            Handles.DrawWireDisc(t.transform.position, Vector3.up, t.innerRadius);
+//        }
+//        else
+//        {
+//            Handles.DrawLine(t.transform.position, t.pointToInLine, 2);
+//        }
+//    }
+//}
