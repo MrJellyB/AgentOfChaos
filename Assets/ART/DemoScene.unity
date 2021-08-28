@@ -3406,7 +3406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775698489866373824, guid: a41759ccf1edc1d47bed85d75768727e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 869.5
+      value: 688
       objectReference: {fileID: 0}
     - target: {fileID: 2775698489866373824, guid: a41759ccf1edc1d47bed85d75768727e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3973,6 +3973,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1257215374, guid: 8302165dea259d444a3a7117d84b75ac, type: 3}
+      propertyPath: possibleClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257215374, guid: 8302165dea259d444a3a7117d84b75ac, type: 3}
+      propertyPath: possibleClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 176051735193559303, guid: 8302165dea259d444a3a7117d84b75ac, type: 3}
       propertyPath: m_Name
       value: Player
