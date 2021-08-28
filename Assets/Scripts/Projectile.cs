@@ -17,9 +17,4 @@ public class Projectile : MonoBehaviour
         var dt = Time.deltaTime;
         this.transform.Translate(this.transform.forward * speed * dt, Space.World);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("bullet hit");
-    }
 }
