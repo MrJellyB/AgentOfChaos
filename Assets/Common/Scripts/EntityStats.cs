@@ -11,6 +11,7 @@ public class EntityStats : MonoBehaviour
     public int hp = 100;
     public bool showBar = false;
     public Transform HealthBar;
+    public GameObject onDeathEffect;
 
     private void Start()
     {
@@ -34,7 +35,12 @@ public class EntityStats : MonoBehaviour
             {
                 GameEvents.InvokeEntityDeathEvent(this);
                 gameObject.SetActive(false);
+                Destroy(gameObject);
                 ownHealthBar?.gameObject.SetActive(false);
+                if (onDeathEffect != null)
+                {
+                    Instantiate(onDeathEffect, transform.position, Quaternion.identity);
+                }
             }
             else
             {
