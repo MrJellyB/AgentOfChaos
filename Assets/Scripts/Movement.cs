@@ -19,7 +19,6 @@ public class Movement : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        anim.SetBool("isAiming", true);
         shotCooldown = 1 / shotsPerSecond;
     }
 
