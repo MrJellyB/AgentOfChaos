@@ -48,7 +48,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6462646367485822238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8567759, y: -2.8583717, z: 6.328272}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1488932562350841712}
@@ -73,7 +73,7 @@ MonoBehaviour:
   path:
   - {fileID: 0}
   - {fileID: 0}
-  marker: {fileID: 2301584606865286329, guid: 10bb995d0d31b2d4bbe45575b8cdb4f0, type: 3}
+  drawGizmos: 0
 --- !u!54 &2084341702
 Rigidbody:
   m_ObjectHideFlags: 0
